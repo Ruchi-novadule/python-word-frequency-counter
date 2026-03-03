@@ -1,0 +1,20 @@
+# Program to count word frequency in a sentence
+
+sentence = input("Enter a sentence: ")
+
+# Convert to lowercase for case-insensitive counting
+sentence = sentence.lower()
+
+words = sentence.split()
+
+word_count = {}
+
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+print("Word Frequency:")
+for word, count in word_count.items():
+    print(word, ":", count)
